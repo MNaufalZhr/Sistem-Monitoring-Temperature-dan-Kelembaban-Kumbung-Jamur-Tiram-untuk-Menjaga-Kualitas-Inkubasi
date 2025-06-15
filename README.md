@@ -27,6 +27,12 @@ sebuah teknologi penyimpanan data digital yang tersusun dalam bentuk rantai blok
    
 ## Web3 
 istilah untuk generasi ketiga dari perkembangan internet yang dibangun di atas teknologi blockchain. Web3 bertujuan membuat internet yang lebih terbuka, terdesentralisasi, dan dimiliki oleh penggunanya.
+
+## PYQT
+1. PyQt adalah sebuah library (pustaka) Python yang berfungsi untuk membuat aplikasi GUI (Graphical User Interface) berbasis Qt framework.
+2. Qt sendiri adalah framework C++ populer yang dipakai banyak aplikasi desktop profesional seperti Spotify, VirtualBox, VLC, dan lainnya.
+3. PyQt adalah binding dari Qt ke dalam Python — artinya, kita bisa menggunakan fitur-fitur GUI dari Qt langsung lewat Python.
+
 # STEP BY STEP PERANCANGAN SISTEM
 ## 1. Konfigurasi Sensor
    ### Main.rs Pada Sensor Sht20
