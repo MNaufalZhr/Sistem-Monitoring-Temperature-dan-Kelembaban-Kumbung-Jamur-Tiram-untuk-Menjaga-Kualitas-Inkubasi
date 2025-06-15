@@ -1,7 +1,7 @@
 # Sistem-Monitoring-Temperature-dan-Kelembaban-Kumbung-Jamur-Tiram-untuk-Menjaga-Kualitas-Inkubasi
 Jamur tiram (Pleurotus ostreatus) membutuhkan kondisi lingkungan optimal, yaitu suhu 22–28°C dan kelembapan 80–90%. Sistem monitoring berbasis IoT telah banyak diterapkan, seperti oleh (Hudhoifah & Mulyana 2024) yang menggunakan NodeMCU dan DHT22, serta (Ntihung et al. 2024) dengan Arduino dan DHT11. Meski efektif, keduanya masih memiliki keterbatasan akurasi sensor, reliabilitas data, dan ketergantungan mikrokontroler .
 Untuk itu, dikembangkan sistem monitoring menggunakan sensor SHT20 Modbus RTU tanpa mikrokontroler, terhubung langsung ke TCP server berbasis Rust, dengan penyimpanan data di InfluxDB dan visualisasi real-time via Grafana. Sistem ini juga dilengkapi integrasi blockchain dan Web3 untuk keamanan dan transparansi data, menjadikannya lebih akurat, stabil, dan aman untuk budidaya jamur tiram. 
-# NAMA KELOMPOK :
+# NAMA KELOMPOK 4 :
 1. Muhammad Naufal Zuhair (2042231005)
 2. Pandu Galuh Satrio (2042231019)
 3. Yanuar Rahmansyah (2042231057)
