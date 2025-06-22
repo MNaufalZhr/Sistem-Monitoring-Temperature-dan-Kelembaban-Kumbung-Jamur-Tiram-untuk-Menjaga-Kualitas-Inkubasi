@@ -696,17 +696,67 @@ root.mainloop()
    
 # TAMPILAN DASHBOARD DAN HASIL DATA
 ## 1. Grafana
-!![image](https://github.com/user-attachments/assets/fc79a895-9148-4f00-ae7a-b400bfe0ca95)
+![image](https://github.com/user-attachments/assets/fc79a895-9148-4f00-ae7a-b400bfe0ca95)
+Menampilkan grafik suhu dan kelembapan dari sensor di Kumbung Inkubasi 1 dalam 6 jam terakhir.
+   1. Garis hijau = kelembapan (%)
+   2. Garis kuning = suhu (°C)
+   3. Data diambil dari sensor SHT20-Kelembapan&Temperature-001
+   4. Waktu data diatur Last 6 hours
+
 ## 2. InfluxDb
-!![image](https://github.com/user-attachments/assets/4cb78480-ac2e-4f36-bc3a-5ec1641792e0)
+![image](https://github.com/user-attachments/assets/4cb78480-ac2e-4f36-bc3a-5ec1641792e0)
+
++ Bucket: kelompokgacor
++ Measurement: monitoring
++ Field: humidity & temperature
++ Filter:
+   1. location = Kumbung Inkubasi 1
+   2. sensor_id = SHT20-Kelembapan&Temperature-001
+   3. stage = Inkubasi
++ Time Range: 15 menit terakhir
++ Window Period: 5 detik
++ Aggregate: last
++ Menampilkan grafik suhu & kelembapan dari sensor jamur secara real-time.
+
 ## 3. PYQT
-!![image](https://github.com/user-attachments/assets/2a4a94ce-efc0-4b55-8929-9657d4ba6f81)
-!![image](https://github.com/user-attachments/assets/3a9bf5d9-2b7e-48d9-9592-fed6852a5358)
+![image](https://github.com/user-attachments/assets/2a4a94ce-efc0-4b55-8929-9657d4ba6f81)
+![image](https://github.com/user-attachments/assets/3a9bf5d9-2b7e-48d9-9592-fed6852a5358)
+
++ Dibuat pakai PyQt (kemungkinan PyQt5 atau PyQt6)
+Panel tab:
+   1. Realtime → menampilkan grafik live
+   2. Tabel Historis → data histori
+   3. Label di atas: suhu & kelembapan terbaru
+Grafik:
++ Matplotlib embedded di PyQt untuk plot suhu (merah) & kelembapan (biru)
++ Data diambil dari InfluxDB via query (bisa pakai influxdb-client-python)
+
 ## 4. Blockchain & Web3
 !![image](https://github.com/user-attachments/assets/f2e96352-a7ec-41bc-a4b4-45a6bc5f1762)
 !![image](https://github.com/user-attachments/assets/9901e02b-dccb-43f4-b9d8-905088b2fb6d)
 !![image](https://github.com/user-attachments/assets/b2da119d-d871-4243-bca9-b04d82025c15)
 
++ Aplikasi desktop berbasis PyQt
+1. Menampilkan realtime suhu & kelembaban dari sensor SHT20
+2. Data diambil dari InfluxDB → ditampilkan dalam label suhu & kelembaban serta grafik realtime
++ Grafik:
+1. Merah: Suhu (°C)
+2. Biru: Kelembaban (%)
++ Fitur: centang Data dari Influx untuk refresh data realtime
+  
++ Dashboard berbasis web (Flask/HTML + Chart.js/Plotly)
++ Menampilkan tabel data sensor:
+1. Timestamp
+2. Sensor ID
+3. Lokasi
+4. Tahap
+5. Temperature
+6. Humidity
 
++ Grafik di bawahnya: visualisasi tren suhu & kelembaban
+1. Terkoneksi ke Wallet Web3 (Metamask)
+2. Terlihat sidebar Metamask extension di browser
+3. Jaringan localhost:8545 mengindikasikan running node/blockchain lokal menggunakan Ganache
+4. Wallet connect ke app (127.0.0.1:5000)
 
 
